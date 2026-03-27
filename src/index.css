@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-main: "Figtree", sans-serif;
+  --color-orange-50: #FFF8F0;
+  --color-orange-100: #FFEDD5;
+  --color-orange-200: #FED7AA;
+  --color-orange-300: #FDBA74;
+  --color-orange-400: #F58420;
+  --color-orange-500: #E67A1A;
+  --color-orange-600: #C2650E;
+  --color-brown-50: #FFF9F4;
+  --color-brown-100: #F5EDE6;
+  --color-brown-200: #E8D5C4;
+  --color-brown-300: #A67C5B;
+  --color-brown-400: #7B4F2E;
+  --color-brown-500: #462512;
+  --color-brown-600: #3A1E0E;
+  --color-brown-700: #2D160A;
+  --color-cream: #FFF9F4;
+  --color-ice: #F5FBFC;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-main); color: #212529; overflow-x: hidden; }
+
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll { animation: scroll-left 25s linear infinite; }
+.animate-scroll:hover { animation-play-state: paused; }
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(245,132,32,0.5); }
+  70% { box-shadow: 0 0 0 14px rgba(245,132,32,0); }
+  100% { box-shadow: 0 0 0 0 rgba(245,132,32,0); }
+}
+.cta-pulse { animation: pulse-ring 2s ease-out infinite; }
